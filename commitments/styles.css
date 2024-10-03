@@ -1,0 +1,198 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --accent-color: #1a73e8;
+  --hero-bg-color: #f8f9fa;
+  --footer-bg-color: #212529;
+  --footer-text-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #3c8cff;
+  --hero-bg-color: #2c2c2c;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 10px 0;
+  background-color: var(--hero-bg-color);
+  text-align: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pledges-hero {
+  background-color: var(--hero-bg-color);
+  color: var(--text-color);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pledges-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.pledges-hero p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+}
+
+.pledges-list {
+  background-color: var(--bg-color);
+  padding: 60px 0;
+}
+
+.pledges-list .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pledge-item {
+  background-color: var(--hero-bg-color);
+  border-radius: 10px;
+  padding: 30px;
+  width: 48%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pledge-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pledge-item .icon {
+  font-size: 48px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.pledge-item h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.pledge-item p {
+  font-size: 18px;
+  color: #666;
+}
+
+.call-to-action {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.call-to-action .btn {
+  padding: 12px 24px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.call-to-action .btn:hover {
+  background-color: #e0e0e0;
+}
+
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links .separator {
+  margin: 0 5px;
+  color: var(--footer-text-color);
+}
+
+.theme-toggle {
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.github-link {
+  color: var(--footer-text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .pledge-item {
+      width: 100%;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-links {
+      margin-bottom: 20px;
+  }
+}
+
